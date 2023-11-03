@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: %;
+}
+.container {
+  padding: 70px;
+}
+</style>
+</head>
+<body>
+<a href="welcome.html">Back</a> 
+<center><h2><u>Add Product</u></h2></center>
+ <form action="products" method="post">
+ <div class="container">
+ <style>body{background-color:lightyellow}</style>
+    
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Product Name" name="name" required>
+    
+    <label for="price"><b>Price</b></label>
+    <input type="text" placeholder="Enter Product Price" name="price" required>
+    
+    <form action="up_Img" method="post" enctype="multipart/form-data">
+    <label for="image"><b>Select Image</b></label>
+    <input type="file" name="image" required><br><br></form>
+    
+    <label for="description"><b>Description</b></label>
+    <input type="text" placeholder="Enter Product Description Here.." name="description" required>
+    
+     <button type="submit">Save</button>     
+     <button type="reset">Reset</button>
+</form>
+</body>
+</html>

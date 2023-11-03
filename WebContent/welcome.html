@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+       
+        #searchBox {
+            margin-bottom:10px;
+            
+        }
+        
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px;
+            background-color:gray;
+        }
+        
+        .mobile-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+         .navigation {
+            list-style-type: none;
+            display: flex;
+        }
+        
+        .navigation li {
+            margin-right: 20px;
+        }
+        
+        .navigation li a {
+            text-decoration: none;
+            color:white;
+            font-weight: bold;
+        }
+  .container{
+  top:30%;
+  left:10%;
+  transform:traslate(-50%,-50%);
+  position:absolute;
+  width:max-content;}
+  
+  .card{
+  border:1px solid black;
+  width:max-content;
+  text-align:center;
+  display:inline-block;
+  margin:5px;}
+  
+  .card img{
+  width:250px;
+  padding:5px; }
+ 
+</style>
+<script>
+        function search() {
+            var input = document.getElementById("searchInput").value.toUpperCase();
+            var ul = document.getElementById("imageList");
+            var li = ul.getElementsByTagName("li");
+            
+            for (var i = 0; i < li.length; i++) {
+                var imageName = li[i].getAttribute("data-name").toUpperCase();
+                if (imageName.indexOf(input) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+   
+</head>
+<body>
+<header>
+<div class="mobile-name">
+  <u>ONLINE MOBILE SHOP MINI PROJECT</u>
+</div>
+<nav>
+<ul class="navigation">
+<li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+<li><a href="CategoryServ"><i class="fa fa-fw fa-book"></i> Categories</a></li>
+<li><a href="ProductServ"><i class="fa fa-fw fa-mobile"></i>Products</a></li>
+<li><a href="logout"><i class="fa fa-fw fa-lock"></i>Logout</a></li>
+</ul>
+</nav></header>
+<style>body{background-color:lightgray}</style>
+<center><h1><u><i>***Welcome To Our Shop***</i></u></h1></center>
+
+<center><div id="searchBox">
+ <input type="text" id="searchInput" placeholder="Search for a Mobiles...">
+ <button onclick="search()">Search</button>
+</div></center>
+
+ <ul id="imageList">
+ <div class="container">
+ <div class="card" id="product1">
+ <li data-name="redmi"><img src="image/Redmi.png" alt="redmi"><center><b>REDMI NOTE9</b></center></li></div>
+ <div class="card" id="product2">
+ <li data-name="Iphone"><img src="image/Iphone 13.jpg" alt="Iphone"><center><b>IPHONE13</b></center></li></div>
+ <div class="card" id="product3">
+ <li data-name="oneplus"><img src="image/oneplus.jpg" alt="oneplus"><center><b>ONEPLUS NORD CE2</b></center></li></div>
+ <div class="card" id="product4">
+ <li data-name="oneplus"><img src="image/fghjhb.jfif" alt="oneplus"><center><b>ONEPLUS9 PRO</b></center></li></div><br>
+ <div class="card" id="product5">
+ <li data-name="iphone"><img src="image/Iphone.png" alt="iphone"><center><b>IPHONE14 PRO</b></center></li></div>
+ <div class="card" id="product6">
+ <li data-name="vivo"><img src="image/vivo.jfif" alt="vivo"><center><b>VIVO X90 PRO</b></center></li></div>
+ <div class="card" id="product7">
+ <li data-name="vivo"><img src="image/Vivo.png" alt="vivo"><center><b>VIVO Y16</b></center></li></div>
+ <div class="card" id="product8">
+ <li data-name="samsung"><img src="image/samsung.jfif" alt="samsung"><center><b>SAMSUNG A54</b></center></li></div><BR>
+ <div class="card" id="product9">
+ <li data-name="samsung"><img src="image/SUMSANG M31.jfif" alt="samsung"><center><b>SAMSUNG M31</b></center></li></div>
+ <div class="card" id="product10">
+ <li data-name="realme"><img src="image/RELME 10PRO.jfif" alt="realme"><center><b>REALME 10PRO</b></center></li></div>
+ <div class="card" id="product11">
+ <li data-name="redmi"><img src="image/REDMI K20 PRO.jfif" alt="redmi"><center><b>REDMI K20</b></center></li></div>
+ <div class="card" id="product12">
+ <li data-name="realme"><img src="image/RELME C35.jfif" alt="realme"><center><b>REALME C35</b></center></li></div>
+  </ul>
+  
+</body>
+</html>
